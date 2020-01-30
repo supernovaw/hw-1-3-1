@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BloodPressureInputActivity">
+
+    <EditText
+        android:id="@+id/systolicInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="@string/systolic_input"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/diastolicInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/diastolic_input"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/systolicInput"
+        app:layout_constraintStart_toStartOf="@+id/systolicInput"
+        app:layout_constraintTop_toBottomOf="@+id/systolicInput"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/pulseInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/pulse_input"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/diastolicInput"
+        app:layout_constraintStart_toStartOf="@+id/diastolicInput"
+        app:layout_constraintTop_toBottomOf="@+id/diastolicInput"
+        android:importantForAutofill="no" />
+
+    <CheckBox
+        android:id="@+id/tachycardiaCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tachycardia_checkbox"
+        app:layout_constraintStart_toStartOf="@+id/pulseInput"
+        app:layout_constraintTop_toBottomOf="@+id/pulseInput" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/save_button"
+        app:layout_constraintStart_toStartOf="@+id/tachycardiaCheckbox"
+        app:layout_constraintTop_toBottomOf="@+id/tachycardiaCheckbox" />
+</androidx.constraintlayout.widget.ConstraintLayout>
